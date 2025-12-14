@@ -17,7 +17,7 @@ This website showcases my background, skills, and selected coursework/projects.
 - GitHub Pages
 
 ## Live Website
-https://hmayrazulq.github.io/portfolio/
+https://hmayrazulq.github.io/humayrasePortfolio/
 
 ## TUTORIAL (IGNORE)
 
