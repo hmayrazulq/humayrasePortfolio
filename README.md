@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This repository contains my personal e-portfolio website created as part of a course requirement.
+This repository contains my personal e-portfolio website created as part of my growth and personal development.
 
 ## About
 I am a Data Engineering student at Universiti Teknologi Malaysia (UTM).
