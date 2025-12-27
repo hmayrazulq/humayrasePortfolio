@@ -11,7 +11,7 @@
     <!-- Favicon -->
     <link rel="icon" href="profile.png" type="image/png">
     
-    <!-- Google Font - Bellota -->
+    <!-- Google Font - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS CDN -->
@@ -35,8 +35,8 @@
                     },
                     // Custom color scheme - Can be modified to match your brand
                     colors: {
-                        primary: '#3B82F6',    // Bright Blue
-                        secondary: '#1E40AF',   // Dark Blue
+                        primary: '#64748B',    // Soft Slate
+                        secondary: '#475569',
                     }
                 }
             }
@@ -58,7 +58,7 @@
 
         .animate-gradient {
             background-size: 200% auto;
-            animation: gradient 4s linear infinite;
+            animation: gradient 12s ease infinite;
         }
 
         /* Background Grid Pattern
@@ -203,6 +203,11 @@
             .section-padding {
                  @apply py-12 md:py-16; /* Reduce padding on mobile */
             }
+
+            /* Force global font (CDN-safe override) */
+            body {
+                font-family: 'Inter', sans-serif !important;
+            }
         }
 
         /* Remove conflicting/redundant rules below this line if they exist */
@@ -230,8 +235,8 @@
         <div class="hero-content site-container relative flex flex-col items-center justify-center min-h-screen py-20">
             <!-- Profile Image with Glow Effect -->
             <div class="relative mb-8 animate-fade-in">
-                <div class="absolute inset-0 bg-blue-500/30 rounded-full blur-3xl transform animate-pulse"></div>
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+                <div class="absolute inset-0 bg-blue-500/30 rounded-full blur-3xl transform"></div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
                 <img 
                     src="profile.png" 
                     alt="CyberBoyAyush Profile"
@@ -250,7 +255,7 @@
             <!-- Typing Effect Text -->
             <p class="text-xl md:text-2xl text-slate-200 mb-8 text-center typewriter">
                 Bachelor of Computer Science (Data Engineering) with Honours Student
-                <span class="inline-block animate-bounce">👨‍💻</span>
+                <span class="opacity-80">👨‍💻</span>
             </p>
 
             <!-- Call-to-Action Buttons -->
@@ -384,7 +389,7 @@
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-semibold mb-2 text-gray-800">Telegram Bots</h3>
-                                <p class="text-gray-600 mb-4 text-sm">Collection of automated bots for Telegram providing various utilities and functions.</p>
+                                <p class="text-gray-600 mb-4 text-sm">Developed and deployed automated Telegram bots to streamline repetitive tasks and improve user interaction through API-based automation.</p>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Python</span>
                                     <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Telegram API</span>
@@ -407,10 +412,10 @@
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-semibold mb-2 text-gray-800">Open Source Projects</h3>
-                                <p class="text-gray-600 mb-4 text-sm">Collection of various open source contributions and personal projects on GitHub.</p>
+                                <p class="text-gray-600 mb-4 text-sm">Maintained and contributed to multiple open-source and personal projects, focusing on clean code practices and collaborative development.</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Various Tech</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Open Source</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-slate-600 rounded-full text-xs font-medium">Various Tech</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-slate-600 rounded-full text-xs font-medium">Open Source</span>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +437,7 @@
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-semibold mb-2 text-gray-800">Portfolio Website</h3>
-                                <p class="text-gray-600 mb-4 text-sm">Personal portfolio website showcasing my work and skills in web development.</p>
+                                <p class="text-gray-600 mb-4 text-sm">Designed and implemented a responsive personal portfolio website to present academic projects, technical skills, and professional interests.</p>
                                 <div class="flex flex-wrap gap-2">
                                     <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">HTML</span>
                                     <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">TailwindCSS</span>
@@ -604,7 +609,7 @@
             {
                 "particles": {
                     "number": {
-                        "value": 80,
+                        "value": 30,
                         "density": {
                             "enable": true,
                             "value_area": 800
@@ -633,7 +638,7 @@
                     },
                     "move": {
                         "enable": true,
-                        "speed": 2,
+                        "speed": 0.6,
                         "direction": "none",
                         "random": true,
                         "straight": false,
