@@ -556,7 +556,7 @@
                 
                     <!-- High School -->
                     <div class="ml-6">
-                      <div class="image-card block">
+                      <div class="image-card block relative">
                       <a href="https://github.com/hmayrazulq" target="_blank" class="absolute inset-0 z-10"></a>
                 
                         <img src="imagesedu/highschool.jpeg" alt="High School">
@@ -565,12 +565,12 @@
                           <h3>SBPI Sabak Bernam – High School</h3>
                           <p>Vice Secretary I of Librarian · President of the English Language Club</p>
                         </div>
-                      </a>
+                      </div>
                     </div>
                 
                     <!-- Foundation -->
                     <div class="ml-6">
-                      <div class="image-card block">
+                      <div class="image-card block relative">
                        <a href="https://github.com/hmayrazulq" target="_blank" class="absolute inset-0 z-10"></a>
                 
                         <img src="foundation.jpg" alt="Foundation"/>
@@ -579,12 +579,12 @@
                           <h3>Foundation Studies @ UTMJB</h3>
                           <p>Foundation in Physical Sciences</p>
                         </div>
-                      </a>
+                      </div>
                     </div>
                 
                     <!-- University -->
                     <div class="ml-6">
-                     <div class="image-card block">
+                     <div class="image-card block relative">
                        <a href="https://github.com/hmayrazulq" target="_blank" class="absolute inset-0 z-10"></a>
                 
                         <img src="university.jpg" alt="University"/>
@@ -593,7 +593,7 @@
                           <h3>UTMJB – Data Engineering</h3>
                           <p>Bachelor · Ongoing</p>
                         </div>
-                      </a>
+                      </div>
                     </div>
                 
                   </div>
@@ -842,20 +842,21 @@
                     </span>
                   </h2>
                 
-            <div class="text-center">
-              <a href="mailto:hmyr.zlqrnn@gmail.com
-                        ?subject=Portfolio Contact
-                        &body=Hi Humayra,%0D%0A%0D%0A"
-                 class="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition">
-                 
-                <i class="fas fa-envelope mr-3"></i>
-                Send Me an Email
-              </a>
-            
-              <p class="mt-4 text-sm text-gray-500">
-                Clicking the button will open your email app
-              </p>
-            </div>
+                <div class="text-center">
+                  <a href="mailto:hmyr.zlqrnn@gmail.com
+                            ?subject=Portfolio Contact
+                            &body=Hi Humayra,%0D%0A%0D%0A"
+                     class="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition">
+                     
+                    <i class="fas fa-envelope mr-3"></i>
+                    Send Me an Email
+                  </a>
+                
+                  <p class="mt-4 text-sm text-gray-500">
+                    Clicking the button will open your email app
+                  </p>
+                </div>
+            </section>
 
             <!-- Social Links -->
             <section id="socials" class="section-content section-padding reveal">
@@ -1062,7 +1063,7 @@
 
         const skillBars = document.querySelectorAll('.skill-bar');
 
-          const observer = new IntersectionObserver(entries => {
+          const skillObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 entry.target.style.width = entry.target.dataset.width;
