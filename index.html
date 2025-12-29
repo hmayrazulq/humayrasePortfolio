@@ -155,6 +155,11 @@
             transition: all 0.3s ease;
         }
 
+        .hero-card.active {
+            border-color: #6EE7B7;
+            box-shadow: 0 0 0 2px rgba(110, 231, 183, 0.4);
+        }
+        
         .hero-btn i {
             transition: transform 0.3s ease;
         }
@@ -167,6 +172,25 @@
         .hero-btn:hover i {
             transform: translateX(4px);
         }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s ease;
+        }
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+               
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
         .section-title {
@@ -355,6 +379,9 @@
                 <a href="#contact" class="hero-btn">
                      Contact Me <i class="fas fa-arrow-right"></i>
                 </a>
+                <a href="#socials" class="hero-btn">
+                     Socials <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
 
 
@@ -393,7 +420,7 @@
 
             
             <!-- SECTION: Education -->
-            <section id="education" class="section-content section-padding">
+            <section id="education" class="section-content section-padding reveal">
                 <div class="max-w-5xl mx-auto">
                     <h2 class="section-title">Education</h2>
 
@@ -432,7 +459,7 @@
             
             <!-- SECTION: Skills -->
             <!-- Modify the percentages and skills to match your expertise -->
-            <section id="skills" class="section-content section-padding">
+            <section id="skills" class="section-content section-padding reveal">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">My Skills</span>
@@ -482,7 +509,7 @@
                  3. Description
                  4. Technology tags
                  5. Links to live demo/code -->
-            <section id="courses" class="section-content section-padding">
+            <section id="courses" class="section-content section-padding reveal">
                 <div class="max-w-6xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-12">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Courses</span>
@@ -581,26 +608,9 @@
             </section>
 
 
-            <!-- SECTION: Courses -->
-            <section id="courses" class="section-content section-padding">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="edu-card">
-                        <h3>Dean’s List</h3>
-                            <p class="edu-expand">Semester 1 – 2025</p>
-                    </div>
-                <div class="edu-card">
-                        <h3>Programming Certificate</h3>
-                            <p class="edu-expand">C++ / Python</p>
-                </div>
-                <div class="edu-card">
-                        <h3>Competition</h3>
-                            <p class="edu-expand">Hackathon / Olympiad</p>
-                </div>
-                </div>
-
 
             <!-- SECTION: Achievements & Certificates -->
-            <section id="honors" class="section-content section-padding">
+            <section id="honors" class="section-content section-padding reveal">
                 <div class="max-w-5xl mx-auto">
                     <h2 class="section-title">Honors & Awards</h2>
             
@@ -625,7 +635,7 @@
 
 
             <!-- Tools Section -->
-            <section id="tools" class="section-content section-padding">
+            <section id="tools" class="section-content section-padding reveal">
                 <div class="max-w-6xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Tools I Use</span>
@@ -661,7 +671,7 @@
 
             <!-- SECTION: Contact Form -->
             <!-- IMPORTANT: Replace 'your-form-id' with your actual Formspree form ID -->
-            <section id="contact" class="section-content section-padding">
+            <section id="contact" class="section-content section-padding reveal">
                 <div class="max-w-4xl mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Get In Touch</span>
@@ -697,7 +707,7 @@
             </section>
 
             <!-- Contact Links -->
-            <section id = "socials" class="section-content section-padding">
+            <section id = "socials" class="section-content section-padding reveal">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Get In Touch</span>
@@ -830,6 +840,39 @@
             }
         );
 
+        const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".hero-card");
+            
+            window.addEventListener("scroll", () => {
+                let current = "";
+            
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+                });
+            
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + current) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        
+        const reveals = document.querySelectorAll(".reveal");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        });
+
+        reveals.forEach(section => observer.observe(section));
+        
         // Smooth Scrolling Navigation
         /* Enables smooth scrolling when clicking navigation links */
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
