@@ -125,17 +125,18 @@
         /* Moving Discs */
         .hero-title .disc {
             display: inline-block;
-            animation: bounce 2s infinite ease-in-out;
+            animation: spin 6s linear infinite;
         }
 
         .hero-title .disc:nth-child(2) {
-            animation-delay: 0.3s; /* stagger the second disc */
+            animation-duration: 8s; /* slightly different speed */
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
+
 
         /* Hero Button Design */
         .hero-btn {
@@ -578,7 +579,7 @@
 
 
             <!-- SECTION: Courses -->
-            <section id="honors" class="section-content section-padding">
+            <section id="courses" class="section-content section-padding">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="edu-card">
                         <h3>Dean’s List</h3>
@@ -597,6 +598,28 @@
 
             <!-- SECTION: Achievements & Certificates -->
             <section id="honors" class="section-content section-padding">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="section-title">Honors & Awards</h2>
+            
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="edu-card">
+                            <h3>Dean’s List</h3>
+                            <p class="edu-expand">Semester 1 – 2025</p>
+                        </div>
+            
+                        <div class="edu-card">
+                            <h3>Programming Certificate</h3>
+                            <p class="edu-expand">C++ / Python</p>
+                        </div>
+            
+                        <div class="edu-card">
+                            <h3>Competition</h3>
+                            <p class="edu-expand">Hackathon / Olympiad</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <!-- Tools Section -->
             <section id="tools" class="section-content section-padding">
@@ -671,7 +694,7 @@
             </section>
 
             <!-- Contact Links -->
-            <section class="section-content section-padding">
+            <section id = "socials" class="section-content section-padding">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Get In Touch</span>
