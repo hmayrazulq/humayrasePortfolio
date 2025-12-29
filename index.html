@@ -207,7 +207,7 @@
         /* Moving Discs */
         .hero-title .disc {
             display: inline-block;
-            animation: spin 10s linear infinite;
+            animation: spin 2s linear infinite;
         }
 
         .hero-title .disc:nth-child(2) {
@@ -573,7 +573,7 @@
                       <div class="image-card block relative">
                        <a href="https://github.com/hmayrazulq" target="_blank" class="absolute inset-0 z-10"></a>
                 
-                        <img src="foundation.jpg" alt="Foundation"/>
+                        <img src="imagesedu/foundation.jpeg" alt="Foundation"/>
                 
                         <div class="image-card-content">
                           <h3>Foundation Studies @ UTMJB</h3>
@@ -587,7 +587,7 @@
                      <div class="image-card block relative">
                        <a href="https://github.com/hmayrazulq" target="_blank" class="absolute inset-0 z-10"></a>
                 
-                        <img src="university.jpg" alt="University"/>
+                        <img src="imagesedu/utm.jpeg" alt="University"/>
                 
                         <div class="image-card-content">
                           <h3>UTMJB – Data Engineering</h3>
@@ -1071,7 +1071,7 @@
             });
           }, { threshold: 0.3 });
 
-          skillBars.forEach(bar => observer.observe(bar));
+          skillBars.forEach(bar => skillObserver.observe(bar));
 
         // Smooth Scrolling Navigation
         /* Enables smooth scrolling when clicking navigation links */
