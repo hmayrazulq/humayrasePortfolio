@@ -139,18 +139,34 @@
 
         /* Hero Button Design */
         .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+
             padding: 0.75rem 1.75rem;
-            background-color: rgba(16, 185, 129, 0.85); /* emerald */
-            color: white;
+            background-color: rgba(167, 243, 208, 0.25); /* light green */
+            color: #ECFDF5;
+
+            border: 1px solid rgba(167, 243, 208, 0.6); /* thin border */
             border-radius: 9999px;
+
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .hero-btn:hover {
-            background-color: rgba(5, 150, 105, 0.95);
-            transform: scale(1.05);
+        .hero-btn i {
+            transition: transform 0.3s ease;
         }
+
+        .hero-btn:hover {
+            background-color: rgba(167, 243, 208, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .hero-btn:hover i {
+            transform: translateX(4px);
+        }
+
 
         .section-title {
             text-align: center;
@@ -323,27 +339,23 @@
             <!-- Call-to-Action Buttons -->
             <!-- These buttons link to important sections -->
             <div class="flex flex-wrap gap-4 justify-center mt-8">
-                <a href="#education" class="hero-btn">Education</a>
-                <a href="#skills" class="hero-btn">My Skills</a>
-                <a href="#tools" class="hero-btn">Tools I Use</a>
-                <a href="#honors" class="hero-btn">Honors & Awards</a>
-                <a href="#contact" class="hero-btn">Contact Me</a>
-                <a href="#courses" 
-                   class="group px-8 py-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <span class="flex items-center">
-                        View Courses
-                        <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                    </span>
+                <a href="#education" class="hero-btn">
+                    Education <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#contact" 
-                   class="group px-8 py-3 border-2 border-emerald-600 rounded-full font-semibold text-emerald-100 hover:bg-emerald-800/40 transform hover:scale-105 transition-all duration-300">
-                    <span class="flex items-center">
-                        Contact Me
-                        <i class="fas fa-envelope ml-2 group-hover:scale-110 transition-transform"></i>
-                    </span>
+                <a href="#skills" class="hero-btn">
+                    My Skills <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#tools" class="hero-btn">
+                    Tools I Use <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#honors" class="hero-btn">
+                    Honors & Awards <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="hero-btn">
+                     Contact Me <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-        </div>
+
 
         <!-- Enhanced Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
@@ -416,9 +428,10 @@
                 </div>
             </section>
 
+            
             <!-- SECTION: Skills -->
             <!-- Modify the percentages and skills to match your expertise -->
-            <section class="section-content section-padding">
+            <section id="skills" class="section-content section-padding">
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">My Skills</span>
@@ -581,8 +594,12 @@
                 </div>
                 </div>
 
+
+            <!-- SECTION: Achievements & Certificates -->
+            <section id="honors" class="section-content section-padding">
+
             <!-- Tools Section -->
-            <section class="section-content section-padding">
+            <section id="tools" class="section-content section-padding">
                 <div class="max-w-6xl mx-auto">
                     <h2 class="text-3xl font-bold text-center mb-8">
                         <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Tools I Use</span>
