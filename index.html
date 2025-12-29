@@ -121,6 +121,22 @@
             left: 0;
             z-index: 1; /* Ensure it's behind hero content */
         }
+
+        /* Moving Discs */
+        .hero-title .disc {
+            display: inline-block;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        .hero-title .disc:nth-child(2) {
+            animation-delay: 0.3s; /* stagger the second disc */
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
         
         /* Hero Content Stacking */
         .hero-content {
@@ -254,8 +270,9 @@
 
             <!-- Typing Effect Text -->
             <p class="text-xl md:text-2xl text-gray-100 mb-8 text-center typewriter">
+                <span class="disc">💿</span>
                 Bachelor of Computer Science (Data Engineering) with Honours Student
-                <span class="opacity-80">💿</span>
+                <span class="disc">💿</span>
             </p>
 
             <!-- Call-to-Action Buttons -->
@@ -622,7 +639,7 @@
                         "type": "circle"
                     },
                     "opacity": {
-                        "value": 0.5,
+                        "value": 0.8,
                         "random": true
                     },
                     "size": {
@@ -633,12 +650,12 @@
                         "enable": true,
                         "distance": 150,
                         "color": "#ffffff",
-                        "opacity": 0.4,
+                        "opacity": 0.6,
                         "width": 1
                     },
                     "move": {
                         "enable": true,
-                        "speed": 0.6,
+                        "speed": 1.0,
                         "direction": "none",
                         "random": true,
                         "straight": false,
