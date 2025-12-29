@@ -362,6 +362,43 @@
             z-index: 0; /* Behind everything */
         }
 
+        .skill-track {
+          background: #e5e7eb; /* soft neutral */
+          border-radius: 9999px;
+          height: 0.75rem;
+          overflow: hidden;
+        }
+        
+        .skill-bar {
+          height: 100%;
+          width: 0;
+          border-radius: 9999px;
+          transition: width 1.5s ease-in-out;
+        }
+        
+        /* Colour variants */
+        .skill-emerald {
+          background: linear-gradient(90deg, #10b981, #34d399);
+        }
+        
+        .skill-teal {
+          background: linear-gradient(90deg, #14b8a6, #2dd4bf);
+        }
+        
+        .skill-cyan {
+          background: linear-gradient(90deg, #06b6d4, #67e8f9);
+        }
+        
+        .skill-lime {
+          background: linear-gradient(90deg, #84cc16, #bef264);
+        }
+
+        .skill-bar {
+          box-shadow: 0 0 10px rgba(16, 185, 129, 0.35);
+        }
+
+
+
         .animated-bg span {
             position: absolute;
             display: block;
@@ -566,78 +603,69 @@
             <!-- SECTION: Skills -->
             <!-- Modify the percentages and skills to match your expertise -->
             <section id="skills" class="section-content section-padding reveal">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center mb-8">
-                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">My Skills</span>
-                    </h2>
-                    <div class="bg-white rounded-xl shadow-lg p-8 space-y-6">
-                        <!-- C++ Skill -->
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">C++</span>
-                                <span class="text-primary">70%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 70%"></div>
-                            </div>
-                        </div>
-
-                        <!-- HTML Skill -->
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">HTML</span>
-                                <span class="text-primary">40%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 40%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Malay Language Skill -->
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Language (Malay)</span>
-                                <span class="text-primary">90%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 100%"></div>
-                            </div>
-                        </div>
-                
-                        <!-- English Language Skill -->
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Language (English)</span>
-                                <span class="text-primary">80%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 100%"></div>
-                            </div>
-                        </div>
-
-                    <!-- French Language Skill -->
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Language (French)</span>
-                                <span class="text-primary">45%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 100%"></div>
-                            </div>
-                        </div>
-
-                    <!-- Mandarin Language Skill -->
-                        <div class="skill-item">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold">Language (Mandarin)</span>
-                                <span class="text-primary">20%</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="skill-progress-bar" style="width: 100%"></div>
-                            </div>
-                        </div>
+                  <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">
+                  <span class="bg-gradient-to-r from-emerald-600 to-teal-500 text-transparent bg-clip-text">
+                    Skills
+                  </span>
+                </h2>
+            
+                <div class="space-y-8">
+            
+                  <!-- Skill -->
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span class="font-medium">C++ 🖥️</span>
+                      <span class="text-sm text-gray-500">75%</span>
                     </div>
+                    <div class="skill-track">
+                      <div class="skill-bar skill-emerald" data-width="75%"></div>
+                    </div>
+                  </div>
+            
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span class="font-medium">HTML ✒️</span>
+                      <span class="text-sm text-gray-500">40%</span>
+                    </div>
+                    <div class="skill-track">
+                      <div class="skill-bar skill-teal" data-width="70%"></div>
+                    </div>
+                  </div>
+            
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span class="font-medium">Language (Malay) 🍚</span>
+                      <span class="text-sm text-gray-500">Native</span>
+                    </div>
+                    <div class="skill-track">
+                      <div class="skill-bar skill-cyan" data-width="90%"></div>
+                    </div>
+                  </div>
+            
+                  <div>
+                    <div class="flex justify-between mb-2">
+                      <span class="font-medium">Language (English) 💂🏻‍♂️</span>
+                      <span class="text-sm text-gray-500">Fluent</span>
+                    </div>
+                    <div class="skill-track">
+                      <div class="skill-bar skill-lime" data-width="85%"></div>
+                    </div>
+                  </div>
+
+                    <div>
+                      <div class="flex justify-between mb-2">
+                        <span class="font-medium">Language (French) 🥖</span>
+                        <span class="text-sm text-gray-500">Moderate Fluency</span>
+                      </div>
+                      <div class="skill-track">
+                        <div class="skill-bar skill-teal" data-width="45%"></div>
+                      </div>
+                    </div>
+
+            
                 </div>
+              </div>
             </section>
 
             <!-- SECTION: Courses -->
@@ -661,7 +689,7 @@
                                  target="_blank"
                                  class="image-card">
                             
-                                <img src="discrete.jpg" alt="Database Systems">
+                                <img src="discrete.jpg" alt="Discrete Structure">
                             
                                 <div class="image-card-content">
                                   <h3>Discrete Structure</h3>
@@ -1031,6 +1059,18 @@
                 e.target.closest(".modal").style.display = "none";
             }
         }
+
+        const skillBars = document.querySelectorAll('.skill-bar');
+
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.style.width = entry.target.dataset.width;
+              }
+            });
+          }, { threshold: 0.3 });
+
+          skillBars.forEach(bar => observer.observe(bar));
 
         // Smooth Scrolling Navigation
         /* Enables smooth scrolling when clicking navigation links */
