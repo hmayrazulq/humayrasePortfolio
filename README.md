@@ -16,11 +16,7 @@ This website showcases my background, skills, and selected coursework/projects.
 - CSS
 - GitHub Pages
 
-## Live Website
-
-
-[![Netlify Deploy](https://img.shields.io/github/forks/cyberboyayush/Simple-Portfolio?style=for-the-badge)](https://github.com/CyberBoyAyush/Simple-Portfolio)
-[![Netlify Deploy](https://img.shields.io/github/stars/cyberboyayush/simple-portfolio?style=for-the-badge)](https://github.com/CyberBoyAyush/Simple-Portfolio)
+# Live Portfolio Website
 
 
 # Push Edited Code On Github
@@ -34,13 +30,6 @@ git push origin [branch_name]
 - Instead of your_repo add your repo link.
 - Instead of branch_name add origin branch (default is master).
 
-# Deploy Simple-Portfolio on Github Pages
-GitHub Pages is a great free option for hosting static websites directly from your GitHub repository.
-**Go to your repo >> settings >> pages >> source >> select master (or main) branch >> select / (root) folder >> now click on save**
-Your site will be available at `https://<your-username>.github.io/<your-repo-name>/`.
 
-# Deploy Simple-Portfolio on Netlify
-Netlify offers robust free hosting for static sites with features like continuous deployment, forms, and more.
-
-## Click on below button to deploy it on Netlify
+## Click on below button to deploy on Netlify
 [![Netlify Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CyberBoyAyush/Simple-Portfolio)
