@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html>  <!--- Tells the browser that this website uses HTML5, the latest web standard --->
+<html lang="en"> <!--- specifies that the content is in English --->
+<head> <!-- contains settings and resources -->
     <!-- Essential Meta Tags for Responsive Design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- display all characters correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ensures the website adapts to different screen sizes -->
     <title>Humayra' - Portfolio</title>
     
     <!-- External Resources & CDN Links -->
     <!-- These provide fonts, icons, and styling frameworks -->
-    <!-- Favicon -->
+    <!-- Favicon is the small icon shown in the browser tab -->
     <link rel="icon" href="profile.png" type="image/png">
     
     <!-- Google Font - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN, a utility-first CSS framework, no need to write long custom CSS files -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Heroicons (for better icons) -->
+    <!-- Heroicons (for better icons, buttons, UI indicators in Tailwind) -->
     <script src="https://unpkg.com/@heroicons/v2/outline/24/esm/index.js"></script>
     
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome Icons, Gives access to popular icons like LinkedIn, GitHub, email -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- Tailwind Configuration -->
+    <!-- Tailwind Configuration, customizes Tailwind’s default design system -->
     <!-- Customize Tailwind's default styles and add custom colors -->
     <script>
         tailwind.config = {
@@ -35,8 +35,8 @@
                     },
                     // Custom color scheme - Can be modified to match your brand
                     colors: {
-                        primary: '#64748B',    // Soft Slate
-                        secondary: '#475569',
+                        primary: '#64748B',    // Soft Slate Blue
+                        secondary: '#475569',  // Bluish
                     }
                 }
             }
@@ -47,13 +47,14 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <!-- Custom Animations and Styles -->
-    <style>
+    <!--- Opens an internal CSS style block --->
+    <style> 
         /* Gradient Text Animation
-           Creates a moving gradient effect for text elements */
+           Creates a moving gradient effect for text elements, keyframe defines a CSS animation */
         @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% { background-position: 0% 50%; } /* move to right (starts from left), to centre it */
+            50% { background-position: 100% 50%; }  /*gradient move to right for illusion of moving text */
+            100% { background-position: 0% 50%; }    /* gradient move back to starting position, animation can loop smoothly */
         }
 
         .animate-gradient {
@@ -168,16 +169,17 @@
         .image-card h3 {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #ECFDF5;
+            color: #ECFDF5; /* green */
         }
         
         .image-card p {
             font-size: 0.85rem;
-            color: #D1FAE5;
-            margin-top: 0.25rem;
+            color: #D1FAE5; /* green */
+            margin-top: 0.25rem;  /* margin is for breathing space around an element */
         }
 
-        /* ===== MODAL ===== */
+        /* ===== MODAL, .modal class is the dark overlay that covers the entire screen and centers the content. =====*/
+        
         .modal {
             position: fixed;
             inset: 0;
