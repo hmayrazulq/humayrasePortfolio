@@ -1,8 +1,14 @@
+/* ===== Global Reset ===== */
+/* Remove default margin and padding applied by browsers */
+/* padding: breathing space AWAY from border and content */
+/* margin: breathing space between THIS section and the NEXT section */
 html {
   margin: 0;
   padding: 0;
 }
 
+/* ===== Body Styling ===== */
+/* Sets overall font, background, and spacing for the page */
 body {
   font-family: 'Bellota', cursive;
   font-size: 26pt;
@@ -11,6 +17,8 @@ body {
   margin: 0;
 }
 
+/* ===== Headings ===== */
+/* Main heading style */
 h1 {
   font-size: 15pt;
   color: #ffffff;
@@ -19,6 +27,7 @@ h1 {
   margin: 0 0 10px 0;
 }
 
+/* Styling for text inside h1 (used for decorative border & background) */
 h1 span {
   border: 8px solid #666666;
   border-radius: 8px;
@@ -26,17 +35,22 @@ h1 span {
   padding: 12px;
 }
 
+/* ===== Paragraph Text ===== */
 p {
   padding: 0;
   margin: 0;
   color: #000000;
 }
 
+/* ===== Image Styling ===== */
+/* Makes images circular (used for profile image) */
 .img-circle {
   border: 8px solid white;
   border-radius: 50%;
 }
 
+/* ===== Section Containers ===== */
+/* White card-like sections used to separate content */
 .section {
   background-color: #fff;
   padding: 20px;
@@ -44,11 +58,14 @@ p {
   border-radius: 30px;
 }
 
+/* ===== Header Section ===== */
+/* Background image for header */
 #header {
   background-image: url("https://media.giphy.com/media/KVZWZQoS0yqfIiTAKq/giphy.gif");
   background-size: cover;
 }
 
+/* Profile image inside header */
 #header img {
   display: block;
   width: 500px;
@@ -56,6 +73,7 @@ p {
   margin: auto;
 }
 
+/* Name / title text inside header */
 #header p {
   font-size: 60pt;
   color: #ffffff;
@@ -65,6 +83,8 @@ p {
   text-align: center;
 }
 
+/* ===== Quotes ===== */
+/* Small quote text aligned to the right in hero section */
 .quote {
   font-size: 12pt;
   text-align: right;
@@ -72,11 +92,13 @@ p {
   color: grey;
 }
 
+/* ===== Resume / Navigation Section ===== */
 #res {
   text-align: center;
   margin: 50px auto;
 }
 
+/* Links inside resume section */
 #res a {
   margin: 20px 20px;
   display: inline-block;
@@ -84,17 +106,22 @@ p {
   color: black;
 }
 
+/* Highlight selected item */
 .selected {
   background-color: #f36f48;
   font-weight: bold;
   color: white;
 }
 
+/* ===== Lists ===== */
+/* Adds spacing and emphasis to list items */
 li {
   margin-bottom: 15px;
   font-weight: bold;
 }
 
+/* ===== Progress Bar ===== */
+/* Used to show skill levels */
 progress {
   width: 70%;
   height: 20px;
@@ -102,6 +129,7 @@ progress {
   background: #efefef;
 }
 
+/* Progress bar styling for different browsers */
 progress::-webkit-progress-bar {
   background: #efefef;
 }
@@ -115,6 +143,8 @@ progress::-moz-progress-bar {
   background: #efefef;
 }
 
+/* ===== Media Elements ===== */
+/* Center iframe and audio with border (website inside a frame) */
 iframe,
 audio {
   display: block;
@@ -123,12 +153,15 @@ audio {
   border-radius: 10px;
 }
 
+/* ===== Horizontal Line for new topic ===== */
 hr {
   border: 0;
   height: 1px;
   background: #f36f48;
 }
 
+/* ===== Form Inputs ===== */
+/* Styling input fields for user typing boxes */
 input {
   text-align: center;
   font-size: 25pt;
@@ -139,11 +172,13 @@ input {
   background-color: #d7d7d7;
 }
 
+/* Input focus effect (turn dark when clicked) */
 input:focus {
   background-color: #2f2f2f;
   color: white;
 }
 
+/* ===== Form Container ===== */
 form {
   text-align: center;
   font-size: 30pt;
@@ -153,6 +188,8 @@ form {
   border-radius: 12px;
 }
 
+/* ===== Instagram Image ===== */
+/* Circular Instagram icon positioning */
 #insta-image {
   display: block;
   width: 100px;
@@ -163,6 +200,7 @@ form {
   margin-top: -75px;
 }
 
+/* ===== Contact Section ===== */
 #contacts img {
   height: 150px;
   width: 150px;
@@ -174,6 +212,7 @@ form {
   text-decoration: none;
 }
 
+/* Hover effect on contact icons */
 #contacts img:hover {
   opacity: 0.8;
 }
@@ -182,6 +221,8 @@ form {
   text-align: center;
 }
 
+/* ===== Footer ===== */
+/* Copyright text */
 .copyright {
   font-size: 8pt;
   text-align: right;
